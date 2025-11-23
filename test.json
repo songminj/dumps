@@ -1,0 +1,18 @@
+{
+  "company_name": "ABC 제조",
+  "today": "2025-02-25",
+  "portal_url": "https://company-portal.com/safe",
+  "contact_email": "safety@company.com",
+  "reports": [
+    {
+      "title": "산안법 제27조 위험성 평가 변경",
+      "summary": "위험성 평가 주기가 기존 연 1회에서 반기 1회로 강화되었습니다. 작업장 현황 점검이 필요합니다.",
+      "link": "https://gov.kr/law/12345"
+    },
+    {
+      "title": "중대재해처벌법 시행령 개정",
+      "summary": "경영책임자 의무가 명확해졌으며 안전 예산 확보 규정이 신설되었습니다.",
+      "link": "https://gov.kr/law/98765"
+    }
+  ]
+}

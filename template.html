@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{company_name}} 데일리 법령 리포트</title>
+    <style>
+      body {
+        font-family: 'Apple SD Gothic Neo', 'Roboto', sans-serif;
+        background-color: #f6f8fa;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 680px;
+        margin: auto;
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      }
+      .header-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #222;
+      }
+      .date-text {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 24px 0 10px;
+        color: #333;
+      }
+      .report-item {
+        border: 1px solid #e0e0e0;
+        background: #fafafa;
+        padding: 16px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+      }
+      .report-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .report-summary {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      .report-link {
+        font-size: 14px;
+        text-decoration: none;
+        color: #1976d2;
+      }
+      .btn-wrapper {
+        text-align: center;
+        margin-top: 32px;
+      }
+      .portal-btn {
+        display: inline-block;
+        background: #0d6efd;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #888;
+        margin-top: 32px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      
+      <!-- 헤더 영역 -->
+      <div class="header-title">{{company_name}} 데일리 법령 변경 리포트 📑</div>
+      <div class="date-text">발송일: {{today}}</div>
+
+      <!-- 요약 인트로 -->
+      <div style="font-size:15px; line-height:1.6; color:#444;">
+        안녕하세요, 안전관리자님.<br/>
+        아래는 오늘 업데이트된 제조업 관련 법령 변경 요약입니다.<br/>
+        각 리포트는 **변경 이유 / As-Is / To-Be / 영향도 분석 / 참고 문서(extra_docs)** 를 기반으로 자동 생성되었습니다.
+      </div>
+
+      <!-- 리포트 목록 -->
+      <div class="section-title">📌 오늘의 주요 변경 리포트</div>
+
+      <!-- 반복 시작 -->
+      {{#reports}}
+      <div class="report-item">
+        <div class="report-title">🔹 {{title}}</div>
+        <div class="report-summary">{{summary}}</div>
+        <a class="report-link" href="{{link}}" target="_blank">➡ 자세히 보기</a>
+      </div>
+      {{/reports}}
+      <!-- 반복 끝 -->
+
+      <!-- 포탈 연결 버튼 -->
+      <div class="btn-wrapper">
+        <a href="{{portal_url}}" class="portal-btn" target="_blank">
+          회사 안전 포털 바로가기 🔗
+        </a>
+      </div>
+
+      <!-- 푸터 -->
+      <div class="footer">
+        본 이메일은 시스템에서 자동 발송되었습니다. 문의는 {{contact_email}} 로 연락해주세요.
+      </div>
+
+    </div>
+  </body>
+</html>
