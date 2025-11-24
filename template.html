@@ -1,125 +1,333 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>{{company_name}} 데일리 법령 리포트</title>
-    <style>
-      body {
-        font-family: 'Apple SD Gothic Neo', 'Roboto', sans-serif;
-        background-color: #f6f8fa;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 680px;
-        margin: auto;
-        background: #ffffff;
-        padding: 24px;
-        border-radius: 12px;
-        box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      }
-      .header-title {
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 4px;
-        color: #222;
-      }
-      .date-text {
-        color: #555;
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-      .section-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 24px 0 10px;
-        color: #333;
-      }
-      .report-item {
-        border: 1px solid #e0e0e0;
-        background: #fafafa;
-        padding: 16px;
-        border-radius: 10px;
-        margin-bottom: 16px;
-      }
-      .report-title {
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 6px;
-      }
-      .report-summary {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 10px;
-        line-height: 1.5;
-      }
-      .report-link {
-        font-size: 14px;
-        text-decoration: none;
-        color: #1976d2;
-      }
-      .btn-wrapper {
-        text-align: center;
-        margin-top: 32px;
-      }
-      .portal-btn {
-        display: inline-block;
-        background: #0d6efd;
-        color: white;
-        padding: 14px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 600;
-      }
-      .footer {
-        text-align: center;
-        font-size: 12px;
-        color: #888;
-        margin-top: 32px;
-      }
-    </style>
+    <title>법령 분석 리포트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body>
-    <div class="container">
-      
-      <!-- 헤더 영역 -->
-      <div class="header-title">{{company_name}} 데일리 법령 변경 리포트 📑</div>
-      <div class="date-text">발송일: {{today}}</div>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      font-family: Arial, sans-serif;
+    "
+  >
+    <div
+      style="
+        padding: 32px 16px;
+        background-color: #f5f7fa;
+      "
+    >
+      <!-- Wrapper -->
+      <div
+        style="
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #ffffff;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+          border-radius: 12px;
+          border-top: 4px solid #005eb8;
+          overflow: hidden;
+        "
+      >
+        <!-- Header -->
+        <div
+          style="
+            background-color: #005eb8;
+            padding: 28px 24px 26px 24px;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              padding: 8px 16px;
+              border-radius: 999px;
+              background-color: rgba(0, 94, 184, 0.8); /* 80% 투명 포인트컬러 */
+            "
+          >
+            <span
+              style="
+                font-size: 20px;
+                color: #ffffff;
+              "
+              >📄</span
+            >
+            <span
+              style="
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.03em;
+              "
+              >WEEKLY LEGAL REPORT</span
+            >
+          </div>
 
-      <!-- 요약 인트로 -->
-      <div style="font-size:15px; line-height:1.6; color:#444;">
-        안녕하세요, 안전관리자님.<br/>
-        아래는 오늘 업데이트된 제조업 관련 법령 변경 요약입니다.<br/>
-        각 리포트는 **변경 이유 / As-Is / To-Be / 영향도 분석 / 참고 문서(extra_docs)** 를 기반으로 자동 생성되었습니다.
+          <h1
+            style="
+              color: #ffffff;
+              font-size: 24px;
+              font-weight: bold;
+              margin: 18px 0 6px 0;
+            "
+          >
+            법령 분석 리포트
+          </h1>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.85);
+              margin: 0;
+              font-size: 14px;
+            "
+          >
+            최신 법령 변경사항을 한눈에 확인하세요.
+          </p>
+        </div>
+
+        <!-- Body -->
+        <div style="padding: 28px 24px 24px 24px">
+          <p
+            style="
+              color: #111827;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 0 0 12px 0;
+            "
+          >
+            안녕하세요,
+          </p>
+          <p
+            style="
+              color: #374151;
+              font-size: 14px;
+              line-height: 1.7;
+              margin: 0;
+            "
+          >
+            이번 주에 발행된 법령 분석 리포트를 안내드립니다. 제조 현장의
+            안전관리 및 컴플라이언스 업무에 필요한 주요 변경사항만 선별하여
+            정리했습니다.
+          </p>
+
+          <!-- 상단 안내 박스 -->
+          <div
+            style="
+              margin-top: 20px;
+              padding: 14px 14px 14px 16px;
+              border-radius: 10px;
+              background-color: rgba(0, 94, 184, 0.2); /* 20% 투명 포인트컬러 */
+              border: 1px solid rgba(0, 94, 184, 0.8); /* 80% 테두리 */
+            "
+          >
+            <p
+              style="
+                margin: 0;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #0b1f33;
+              "
+            >
+              ※ 각 리포트의 상세 내용과 영향도 점수를 확인하시고,
+              <strong style="color: #005eb8">업무 프로세스·매뉴얼·교육 자료</strong>
+              등에 필요한 반영 여부를 검토해 주세요.
+            </p>
+          </div>
+
+          <!-- Report List -->
+          <div style="margin-top: 28px">
+            <!-- ▼▼▼ 이 블록을 리포트 개수만큼 복사해서 사용하세요 ▼▼▼ -->
+            <div
+              style="
+                border-radius: 12px;
+                padding: 18px 16px 16px 16px;
+                margin-bottom: 16px;
+                background-color: #ffffff;
+                border: 1px solid rgba(0, 94, 184, 0.2); /* 20% 테두리 */
+              "
+            >
+              <!-- Report Header -->
+              <div style="margin-bottom: 10px">
+                <span
+                  style="
+                    font-size: 11px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    color: #005eb8;
+                    background-color: rgba(0, 94, 184, 0.2); /* 20% 배경 */
+                    padding: 4px 10px;
+                    border-radius: 999px;
+                    display: inline-block;
+                    margin-bottom: 8px;
+                  "
+                  >{{LAW_NAME_1}}</span
+                >
+                <h2
+                  style="
+                    color: #111827;
+                    font-size: 17px;
+                    font-weight: 700;
+                    margin: 0;
+                    line-height: 1.4;
+                  "
+                >
+                  {{REPORT_TITLE_1}}
+                </h2>
+              </div>
+
+              <!-- Summary -->
+              <p
+                style="
+                  color: #4b5563;
+                  font-size: 13px;
+                  line-height: 1.7;
+                  margin: 0 0 14px 0;
+                "
+              >
+                {{REPORT_SUMMARY_1}}
+              </p>
+
+              <!-- Meta -->
+              <div
+                style="
+                  padding-top: 10px;
+                  border-top: 1px solid rgba(0, 94, 184, 0.2); /* 20% 구분선 */
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <span style="color: #6b7280; font-size: 12px">
+                  발행일: <strong style="color: #111827">{{REPORT_PUBLISH_DATE_1}}</strong>
+                </span>
+                <span
+                  style="
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #bf7a00;
+                  "
+                >
+                  영향도
+                  <span
+                    style="
+                      display: inline-block;
+                      min-width: 32px;
+                      text-align: center;
+                      margin-left: 4px;
+                      padding: 2px 6px;
+                      border-radius: 999px;
+                      background-color: rgba(0, 94, 184, 0.2); /* 20% 배경 */
+                      color: #005eb8;
+                    "
+                    >{{REPORT_IMPACT_SCORE_1}}/10</span
+                  >
+                </span>
+              </div>
+
+              <!-- Link -->
+              <a
+                href="{{REPORT_URL_1}}"
+                style="
+                  display: inline-block;
+                  margin-top: 12px;
+                  padding: 10px 16px;
+                  background-color: #005eb8;
+                  color: #ffffff;
+                  text-decoration: none;
+                  border-radius: 6px;
+                  font-size: 13px;
+                  font-weight: 600;
+                "
+              >
+                리포트 상세보기 🔗
+              </a>
+            </div>
+            <!-- ▲▲▲ 여기까지가 리포트 1개 템플릿 ▲▲▲ -->
+
+            <!--
+            같은 형식으로 {{LAW_NAME_2}}, {{REPORT_TITLE_2}} ... 등 복사해서 사용
+            -->
+          </div>
+
+          <!-- Call to Action -->
+          <div
+            style="
+              margin-top: 24px;
+              padding: 18px 16px;
+              border-radius: 10px;
+              background-color: rgba(0, 94, 184, 0.2); /* 20% 박스 배경 */
+              text-align: center;
+            "
+          >
+            <p
+              style="
+                color: #0b1f33;
+                font-size: 13px;
+                line-height: 1.6;
+                margin: 0;
+              "
+            >
+              누적 리포트와 현황 대시보드는 아래 버튼을 눌러 웹 포털에서
+              확인하실 수 있습니다.
+            </p>
+            <a
+              href="https://your-domain.com"
+              style="
+                display: inline-block;
+                margin-top: 14px;
+                padding: 11px 24px;
+                background-color: #005eb8;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 999px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+              "
+            >
+              웹 포털 바로가기
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+          style="
+            padding: 18px 20px 22px 20px;
+            border-top: 1px solid rgba(0, 94, 184, 0.2); /* 20% 구분선 */
+            background-color: #ffffff;
+            text-align: center;
+          "
+        >
+          <p
+            style="
+              color: #6b7280;
+              font-size: 12px;
+              line-height: 1.6;
+              margin: 0;
+            "
+          >
+            본 메일은 법령 분석 리포트 서비스를 구독하신 분께 발송되었습니다.
+          </p>
+          <p
+            style="
+              color: #9ca3af;
+              font-size: 11px;
+              line-height: 1.6;
+              margin: 6px 0 0 0;
+            "
+          >
+            © 2025 법령 분석 리포트. All rights reserved.
+          </p>
+        </div>
       </div>
-
-      <!-- 리포트 목록 -->
-      <div class="section-title">📌 오늘의 주요 변경 리포트</div>
-
-      <!-- 반복 시작 -->
-      {{#reports}}
-      <div class="report-item">
-        <div class="report-title">🔹 {{title}}</div>
-        <div class="report-summary">{{summary}}</div>
-        <a class="report-link" href="{{link}}" target="_blank">➡ 자세히 보기</a>
-      </div>
-      {{/reports}}
-      <!-- 반복 끝 -->
-
-      <!-- 포탈 연결 버튼 -->
-      <div class="btn-wrapper">
-        <a href="{{portal_url}}" class="portal-btn" target="_blank">
-          회사 안전 포털 바로가기 🔗
-        </a>
-      </div>
-
-      <!-- 푸터 -->
-      <div class="footer">
-        본 이메일은 시스템에서 자동 발송되었습니다. 문의는 {{contact_email}} 로 연락해주세요.
-      </div>
-
     </div>
   </body>
 </html>
